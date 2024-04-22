@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  mango1:
+    image: python-load-balancer
+    environment:
+      - APP=mango
+    ports:
+      - "8081:5001"
+
+  mango2:
+    image: python-load-balancer
+    environment:
+      - APP=mango
+    ports:
+      - "8082:5001"
+
+  apple1:
+    image: python-load-balancer
+    environment:
+      - APP=apple
+    ports:
+      - "9081:5001"
+
+  apple2:
+    image: python-load-balancer
+    environment:
+      - APP=apple
+    ports:
+      - "9082:5001"
