@@ -2,6 +2,7 @@ version: "3"
 
 services:
   mango1:
+    container_name: mango1
     image: python-load-balancer
     environment:
       - APP=mango
@@ -9,6 +10,7 @@ services:
       - "8081:5001"
 
   mango2:
+    container_name: mango2
     image: python-load-balancer
     environment:
       - APP=mango
@@ -16,6 +18,7 @@ services:
       - "8082:5001"
 
   apple1:
+    container_name: apple1
     image: python-load-balancer
     environment:
       - APP=apple
@@ -23,6 +26,7 @@ services:
       - "9081:5001"
 
   apple2:
+    container_name: apple2
     image: python-load-balancer
     environment:
       - APP=apple

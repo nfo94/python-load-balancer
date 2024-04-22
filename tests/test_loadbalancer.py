@@ -10,7 +10,7 @@ def client():
 
 
 def test_host_routing_mango(client):
-    result = client.get("/", headers={"Host": "mango.com"})
+    result = client.get("/", headers={"Host": "www.mango.com"})
     assert b"This is the mango application." in result.data
 
 
