@@ -9,4 +9,6 @@ RUN pip install poetry
 RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi
 
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
+ENV FLASK_APP=python_load_balancer/app.py
+
+CMD ["poetry", "run", "flask", "run", "--host=0.0.0.0", "--port=5001"]
