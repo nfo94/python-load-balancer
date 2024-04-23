@@ -1,8 +1,8 @@
 ### python-load-balancer
 
 This project uses [Flask](https://flask.palletsprojects.com/en/3.0.x/),
-[Poetry](https://python-poetry.org/), and [Ruff](https://docs.astral.sh/ruff/). To use this code
-clone this repository:
+[Poetry](https://python-poetry.org/), and [Ruff](https://docs.astral.sh/ruff/). This is a study code.
+To use this code clone this repository:
 
 ```bash
 git clone git@github.com:nfo94/python-load-balancer.git
@@ -11,19 +11,17 @@ git clone git@github.com:nfo94/python-load-balancer.git
 Enter the project folder with `cd python-load-balancer`. Then build the image locally:
 
 ```bash
-docker build -t python-load-balancer
+make build
 ```
 
-Run the image locally:
+to compose the services:
 
 ```bash
-docker run -p 5000:5000 python-load-balancer
+make compose
 ```
 
-To format code:
-
-```bash
-make lint.format
-```
+The `app.py` file is our main server and the `loadbalancer.py` file is our load balancer, meaning
+is the software that will handle the requests for the instances created from the image of the `app.py`
+file (mangos and apples).
 
 You can check other useful commands in the Makefile.
