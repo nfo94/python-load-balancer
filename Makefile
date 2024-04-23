@@ -15,3 +15,6 @@ lint.format:
 
 lint.imports:
 	poetry run ruff check . --select I --fix
+
+test:
+	poetry run python -m pytest
