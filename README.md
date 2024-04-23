@@ -14,7 +14,7 @@ Enter the project folder with `cd python-load-balancer`. Then build the image lo
 make build
 ```
 
-to compose the services:
+To compose the services:
 
 ```bash
 make compose
