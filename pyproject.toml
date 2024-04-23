@@ -9,6 +9,7 @@ packages = [{include = "python_load_balancer"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 flask = "^3.0.3"
+requests = "^2.31.0"
 
 
 [tool.poetry.group.dev.dependencies]
