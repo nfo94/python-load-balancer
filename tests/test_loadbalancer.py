@@ -1,6 +1,6 @@
 import pytest
 
-from python_load_balancer.app import loadbalancer
+from python_load_balancer.loadbalancer import loadbalancer
 
 
 @pytest.fixture
