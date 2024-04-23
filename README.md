@@ -1,7 +1,7 @@
 ### python-load-balancer
 
 This project uses [Flask](https://flask.palletsprojects.com/en/3.0.x/),
-[Poetry](https://python-poetry.org/), and [Ruff](https://docs.astral.sh/ruff/). This is a study code.
+[Poetry](https://python-poetry.org/), and [Ruff](https://docs.astral.sh/ruff/). This is a study codebase.
 To use this code clone this repository:
 
 ```bash
