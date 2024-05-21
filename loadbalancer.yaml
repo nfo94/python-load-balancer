@@ -7,6 +7,11 @@ hosts:
     servers:
       - localhost:9081
       - localhost:9082
+      - localhost:8888
+  - host: www.orange.com
+    servers:
+      - localhost:1111
+      - localhost:1212
 paths:
   - path: /mango
     servers:
@@ -16,3 +21,8 @@ paths:
     servers:
       - localhost:9081
       - localhost:9082
+      - localhost:8888
+  - path: /orange
+    servers:
+      - localhost:1111
+      - localhost:1212

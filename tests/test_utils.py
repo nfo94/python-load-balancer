@@ -1,5 +1,3 @@
-import os
-
 import yaml
 
 from python_load_balancer.models import Server
@@ -10,20 +8,28 @@ from python_load_balancer.utils import (
 )
 
 
-def load_configuration(path):
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    abs_path = os.path.join(dir_path, path)
-
-    with open(abs_path) as config_file:
-        config = yaml.safe_load(config_file)
-
-    return config
-
-
 def test_transform_backends_from_config():
-    input = load_configuration("../loadbalancer.yaml")
+    input = yaml.safe_load("""
+        hosts:
+          - host: www.mango.com
+            servers:
+              - localhost:8081
+              - localhost:8082
+          - host: www.apple.com
+            servers:
+              - localhost:9081
+              - localhost:9082
+        paths:
+          - path: /mango
+            servers:
+              - localhost:8081
+              - localhost:8082
+          - path: /apple
+            servers:
+              - localhost:9081
+              - localhost:9082
+    """)
     output = transform_backends_from_config(input)
-
     assert list(output.keys()) == ["www.mango.com", "www.apple.com", "/mango", "/apple"]
     assert output["www.mango.com"][0] == Server("localhost:8081")
     assert output["www.mango.com"][1] == Server("localhost:8082")
