@@ -2,6 +2,7 @@ import random
 
 import requests
 from flask import Flask, request
+
 from .utils import (
     get_healthy_server,
     healthcheck,

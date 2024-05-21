@@ -4,9 +4,9 @@ import yaml
 
 from python_load_balancer.models import Server
 from python_load_balancer.utils import (
-    transform_backends_from_config,
     get_healthy_server,
     healthcheck,
+    transform_backends_from_config,
 )
 
 
