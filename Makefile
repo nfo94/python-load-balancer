@@ -4,6 +4,9 @@ build:
 compose:
 	docker compose up --build -d
 
+down:
+	docker compose down
+
 lint:
 	poetry run ruff check .
 
